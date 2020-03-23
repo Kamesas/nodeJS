@@ -1,5 +1,14 @@
-const { Schema, mode } = require("mongoose");
+const { Schema, model } = require("mongoose");
 
-const schema = new Schema({});
+const schema = new Schema({
+  title: {
+    type: String,
+    required: true
+  },
+  completed: {
+    type: Boolean,
+    default: false
+  }
+});
 
 module.exports = model("Todo", schema);
